@@ -1,0 +1,48 @@
+import java.util.Scanner;
+public class SalesCommision {
+	public static void main(String args[]){
+		Scanner input=new Scanner(System.in);
+		int []a=new int[20];
+		int []c=new int[9];
+		int n,i,sales;
+		System.out.println("Enter the number of employees");
+		n=input.nextInt();
+		for(i=0;i<n;i++)
+		{
+			System.out.print("Enter Gross value saled by employee "+i+" :");
+			a[i]=input.nextInt();
+		}
+		for(i=0;i<n;i++)
+		{
+			sales=(200)+(9*a[i])/100;
+			 if(sales>=200&&sales<=299)
+				 c[0]++;
+			else if(sales>=300&&sales<=399)
+					c[1]++;
+			 else if(sales>=400&&sales<=499)
+					c[2]++;
+			 else if(sales>=500&&sales<=599)
+					c[3]++;
+			 else if(sales>=600&&sales<=699)
+					c[4]++;
+			 else if(sales>=700&&sales<=799)
+					c[5]++;
+			 else if(sales>=800&&sales<=899)
+					c[6]++;
+			 else if(sales>=900&&sales<=999)
+					c[7]++;
+			 else if(sales>1000)
+					c[8]++;
+		}
+			System.out.println("RANGE"+"\t\t"+"FREQUENCY");
+			System.out.println("$200-299"+"\t"+c[0]);
+			System.out.println("$300-399"+"\t"+c[1]);
+			System.out.println("$300-499"+"\t"+c[2]);
+			System.out.println("$500-599"+"\t"+c[3]);
+			System.out.println("$600-699"+"\t"+c[4]);
+			System.out.println("$700-799"+"\t"+c[5]);
+			System.out.println("$800-899"+"\t"+c[6]);
+			System.out.println("$900-999"+"\t"+c[7]);
+			System.out.println("Above $1000"+"\t"+c[8]);
+	}
+}
